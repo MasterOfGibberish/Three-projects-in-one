@@ -1,0 +1,56 @@
+﻿<Window x:Class="Bomba.Football"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bomba"
+        mc:Ignorable="d"
+        Title="Football" Height="505" Width="602">
+    <Grid Margin="0,0,10,0">
+        <Canvas Name="myCanvas" Focusable="True" KeyDown="KeyIsDown" KeyUp="KeyIsUp">
+
+            <Image Name="FIELD" Source="C:\Users\Namai\OneDrive\Desktop\wpf\WpfApp3\Bomba\Bomba\Resources\soccer-field.png" Height="503" Width="688"
+                   Canvas.Left="32" Canvas.Top="-3" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+
+            <Image Name="RightGoalNet" Source="C:\Users\Namai\OneDrive\Desktop\wpf\WpfApp3\Bomba\Bomba\Resources\soccer-goal.png"  Canvas.Right="-1" 
+                   Canvas.Top="73" HorizontalAlignment="Center" VerticalAlignment="Top" Height="128" Width="103" Canvas.Left="558" 
+                   RenderTransformOrigin="-1.158,2.049">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="179.366"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+
+            <Label Name="txtInfo" FontSize="16" HorizontalAlignment="Center" Canvas.Top="458" VerticalAlignment="Top">Landed on - ??</Label>
+
+            <Rectangle Name="player" Fill="blue" Width="50" Height="50" Canvas.Left="224" Canvas.Top="30" />
+
+            <Rectangle Name="platform1" Fill="Yellow" Tag="platform" Width="264" Height="31" Canvas.Left="224" Canvas.Top="143" />
+            <Rectangle Name="platform2" Fill="Green" Tag="platform" Width="202" Height="31" Canvas.Left="72" Canvas.Top="229" />
+            <Rectangle Name="platform5" Fill="Purple" Tag="platform1" Width="202" Height="50" Canvas.Left="10" Canvas.Top="340" />
+            <Rectangle Name="platform3" Fill="Red" Tag="platform" Width="300" Height="50" Canvas.Left="292" Canvas.Top="338" />
+            
+            <Rectangle Name="platform4" Fill="Black" Tag="Vartai" Width="79" Height="4" Canvas.Left="231" Canvas.Top="420"></Rectangle>
+            <Rectangle Name="box" Tag="box" Height="50" Width="50" Fill="Purple" Canvas.Left="381" Canvas.Top="279" />
+
+        </Canvas>
+        <TextBlock FontSize="24" Name="scoreText" Text="TIME: 0" Loaded="scoreText_Loaded" FontWeight="ExtraBold" Canvas.Top="529" Margin="10,0,-10,0" />
+        <TextBlock FontSize="24" Name="NameText"   FontWeight="ExtraBold" Canvas.Top="529" Margin="503,0,-503,0" />
+
+
+    </Grid>
+
+</Window>
