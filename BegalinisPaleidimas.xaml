@@ -1,0 +1,20 @@
+﻿<Window x:Class="Bomba.BegalinisPaleidimas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bomba"
+        mc:Ignorable="d"
+        Title="BegalinisPaleidimas" Height="800" Width="1000" WindowStyle="None" ResizeMode="NoResize" Background="Transparent" 
+        AllowsTransparency="True" Loaded="Window_Loaded">
+    <Grid>
+        <Button  x:Name="migtukas3" Click="migtukas3_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0" Grid.Column="0"
+                     Padding="30"  BorderThickness="0" RenderTransformOrigin="1.236,0.304" BorderBrush="Transparent" Margin="930,10,0,0">
+            <Button.Background>
+                <ImageBrush ImageSource="C:\Users\Namai\OneDrive\Desktop\ProjektasSUPER\loginscreen\loginscreen\Resources\power.png"/>
+            </Button.Background>
+        </Button>
+        <Image Source="C:\Users\Namai\OneDrive\Desktop\Quotes\meme\200.gif" Margin="0,70,0,0"></Image>
+        <Label x:Name="Animacija"  MouseDoubleClick="Animacija_MouseDoubleClick"  Content="YOU ARE AN IDIOT" Foreground="DarkRed" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 0 200" FontWeight="Heavy" FontSize="50"></Label>
+    </Grid>
+</Window>
